@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nguyen Dinh Long Portfolio">
+
+    <title>Nguyen Dinh Long | Portfolio</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/lucide-icons/dist/umd/lucide.css">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Nguyen Dinh Long</h1>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span class="menu-icon"></span>
+            </button>
+    
+            <nav class="nav" id="mainNav">
+                <button class="nav-link active" data-section="home">Home</button>
+                <button class="nav-link" data-section="experience" href="exp.html">Experiences</button>
+                <button class="nav-link" data-section="projects">Projects</button>
+                <button class="nav-link" data-section="education">Education</button>
+                <button class="nav-link" data-section="contact">Contact</button>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <!--Home Section--> 
+        <section id="home" class="section home-section">
+            <div class="container">
+                <div class="profile">
+                    <div class="profile-picture">
+                        <div class="profile-image-container">
+                            <div class="profile-image">
+                                <img src="../assets/avatar.jpg" alt="avatar">
+                            </div>
+                            <div class="profile-badge">AI Engineer</div>
+                        </div>
+                    </div>
+                    <div class="profile-infor">
+                        <h1 class="profile-name">Nguyễn Đình Long</h1>
+                        <h2 class="profile-title">AI Engineer / Software Engineer</h2>
+                        <p class="profile-bio">Student at <span class="highlight">International University - VNU HCM</span>, passionate about artificial intelligence and software development</p>
+
+                        <div class="contact-buttons">
+                            <a href="mailto:ndlong.work@gmail.com" class="contact-button">
+                                <i data-lucide="mail"></i>
+                                <span>ndlong.work@gmail.com</span>
+                            </a>
+                            <a href="tel:0937439088" class="contact-button">
+                                <i data-lucide="phone"></i>
+                                <span>0937439088</span>
+                            </a>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link github">
+                                <i data-lucide="github"></i>
+                              </a>
+                              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link linkedin">
+                                <i data-lucide="linkedin"></i>
+                              </a>
+                        </div>
+                        <a href="https://drive.google.com" target="_blank" rel="noopener noreferrer" class="download-button">
+                            <i data-lucide="download"></i>
+                            <span>Download CV</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Contact</h2>
+
+                <div class="contact-container">
+                    <div class="contact-infor">
+                        <h2 class="contact-subtitle">Get in Touch</h2>
+                        <p class="contact-text">Feel free to contact me if you have any questions or just want to say hi</p>
+
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="contact-icon">
+                                    <i data-lucide="mail"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4 class="method-name">Email</h4>
+                                    <a href="mailto:ndlong.ityu@gmail.com" class="contact-mail">
+                                        ndlong.ityu@gmail.com
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <div class="contact-icon">
+                                    <i data-lucide="mail"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4 class="method-name">Phone number</h4>
+                                    <a href="mailto:ndlong.ityu@gmail.com" class="contact-mail">
+                                        0937439088
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Your Name</label>
+                                <input type="text" id="name" name="name" class="form-input" placeholder="Your name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="form-label">Gmail</label>
+                                <input type="email" id="email" name="email" class="form-input" placeholder="Your email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="name" class="form-label">Your Massage</label>
+                                <textarea type="text" id="name" name="name" class="form-input" required>
+
+                                </textarea>
+                            </div>
+
+                            <button type="submit" class="form-submit">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,283 @@
+:root {
+    --primary-color: #3b82f6;
+    --primary-dark: #2563eb;
+    --primary-light: #93c5fd;
+    --secondary-color: #6b7280;
+    --text-color: #1f2937;
+    --text-light: #4b5563;
+    --text-lighter: #9ca3af;
+    --bg-color: #f9fafb;
+    --bg-alt: #ffffff;
+    --bg-dark: #1f2937;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --border-radius: 0.5rem;
+    --transition: all 0.3s ease;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.section {
+    padding: 5rem 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+  }
+  
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -0.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4rem;
+    height: 0.25rem;
+    background-color: var(--primary-color);
+    border-radius: 0.25rem;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: (--text-color);
+    background-color: (--bg-color);
+}
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0px auto;
+    padding: 0 1.5rem;
+}
+
+button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    font: inherit;
+}
+
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: var(--bg-alt);
+    box-shadow: var(--shadow-sm);
+    z-index: 1000;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.nav {
+    display: flex;
+}
+
+.nav-link {
+    padding: 0.5rem 1rem;
+    color: var(--text-light);
+    font-weight: 500;
+    transition: var(--transition)
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+.nav-link.active{
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/*My Journey*/
+.journey{
+    padding-top: 7rem;
+    background-color: var(--bg-color);
+    height: 100vh;
+}
+.journey-container{
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    align-items: center;
+    justify-content: center;
+    background-color: blue;
+}
+
+.journey-container .title{
+    width: 100%;
+    text-align: center;
+    background-color: red;
+}
+
+.journey-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 2rem;
+}
+.journey-event{
+    display: flex;
+    width: 40%;
+    background-color: blue;
+    height: 70%;
+}
+
+.journey-timeline{
+    width: 20%;
+    background-color: red;
+}
+
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px 0;
+}
+
+/* Center Vertical Line */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: #333;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Event Container */
+.event {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 45%;
+    margin: 30px 0;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Left Events */
+.event.left {
+    left: 0;
+    justify-content: flex-end;
+    text-align: right;
+}
+
+/* Right Events */
+.event.right {
+    left: 55%;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+/* Timeline Circles */
+.event::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 16px;
+    height: 16px;
+    background-color: #333;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.event.left::before {
+    right: -10px;
+}
+
+.event.right::before {
+    left: -10px;
+}
+
+/* Image Styling */
+.event img {
+    width: 120px; /* Increased width for landscape */
+    height: 80px; /* Fixed height to maintain aspect ratio */
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.event.left img {
+    margin-left: 15px;
+}
+
+.event.right img {
+    margin-right: 15px;
+}
+
+.event-content {
+    max-width: 60%;
+}
+
+.event h3 {
+    margin: 5px 0;
+}
+
+.event p {
+    margin: 5px 0;
+    color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .timeline::after {
+        left: 20px;
+    }
+    .event {
+        width: 100%;
+        left: 0;
+        flex-direction: row-reverse;
+        text-align: left;
+        padding-left: 40px;
+    }
+    .event.right {
+        left: 0;
+    }
+    .event.left img,
+    .event.right img {
+        margin-left: 0;
+        margin-right: 15px;
+    }
+    .event.left::before,
+    .event.right::before {
+        left: 10px;
+    }}
